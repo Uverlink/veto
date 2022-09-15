@@ -16,9 +16,9 @@ export class AppComponent implements OnInit {
     console.table(this.animalList);
   }
 
-  selectAnimal(animalId: string) {
+  selectAnimal(animalId: string) {// ???????
     const id = +animalId
-    const animal: Animal|undefined = this.animalList.find(animal => animal.id == +animalId);
+    const animal: Animal|undefined = this.animalList.find(animal => animal.id == +animalId); // ???????
     if(animal) {
       console.log(`Vous avez sélectionné ${animal.name}`);
       this.animalSelected = animal;

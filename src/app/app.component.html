@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
     <div *ngFor="let animal of animalList" class="col m4 s6">
-      <div class="card horizontal">
+      <div class="card horizontal" (click)="selectAnimal(animal)" animalBorderCard>
         <div class="card-image">
           <img [src]="animal.picture"/>
         </div>
@@ -14,7 +14,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
