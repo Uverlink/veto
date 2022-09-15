@@ -7,25 +7,4 @@ import { Animal } from "./animal";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  title = 'Super Veto +';
-  animalList: Animal[] = ANIMALS;
-  animalSelected: Animal|undefined;
-
-  ngOnInit(): void {
-    console.table(this.animalList);
-  }
-
-  selectAnimal(animalId: number) {
-    const id = +animalId
-    const animal: Animal|undefined = this.animalList.find(animal => animal.id == +animalId);
-    if(animal) {
-      console.log(`Vous avez sélectionné ${animal.name}`);
-      this.animalSelected = animal;
-    } else {
-      console.log("Aucun animal ne correspond à cette recherche.")
-      this.animalSelected = animal;
-    }
-    
-  }
-}
+export class AppComponent {}

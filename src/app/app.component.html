@@ -1,29 +1,3 @@
-<h1 class="center">Liste d'Animaux</h1>
-
-<div class="container">
-  <div class="row">
-    <div *ngFor="let animal of animalList" class="col m4 s6">
-      <div class="card horizontal" (click)="selectAnimal(animal.id)" animalBorderCard>
-        <div class="card-image">
-          <img [src]="animal.picture"/>
-        </div>
-        <div class="card-stacked">
-          <div class="card-content">
-            <p> {{animal.name}}</p>
-            <p><small>{{animal.birth | date:"dd/MM/YY" }}</small></p>
-            <app-checkdate [animal]="animal"></app-checkdate>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<p *ngIf="animalSelected">
-  Vous avez sélectionné: {{ animalSelected?.name }}
-</p>
-<p *ngIf="!animalSelected">
-  Tapez l'id valide d'un animal dans la barre de recherche.
-</p>
+<h1 class="center">Super Veto+</h1>
 
 <router-outlet></router-outlet>

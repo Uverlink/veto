@@ -30,6 +30,9 @@ export class CheckdateComponent implements OnInit {
       this.state = 'late';
     }
 
-    this.diffTime = Math.floor(diff);
+    this.diffTime = diff;
   }
+
+
+  // trunc(nb:number) => Math.trunc(nb);
 }

@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+      <div *ngFor="let animal of animalList" class="col m4 s6">
+        <div class="card horizontal" animalBorderCard>
+          <div class="card-image">
+            <img [src]="animal.picture"/>
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <p> {{animal.name}}</p>
+              <p><small>{{animal.birth | date:"dd/MM/YY" }}</small></p>
+              <app-checkdate [animal]="animal"></app-checkdate>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

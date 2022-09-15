@@ -1,0 +1,44 @@
+<div *ngIf="animal" class="row">
+    <div class="col s12 m8 offset-m2">
+    <h2 class="header center">{{ animal.name }}</h2>
+    <div class="card horizontal hoverable">
+      <div class="card-image">
+        <img [src]="animal.picture">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <table class="bordered striped">
+            <tbody>
+              <tr>
+                <td>Nom</td>
+                <td><strong>{{ animal.name }}</strong></td>
+              </tr>
+              <tr>
+                <td>Propriétaire</td>
+                <td><strong>{{ animal.owner }}</strong></td>
+              </tr>
+              <tr>
+                <td>E-Mail</td>
+                <td><strong>{{ animal.email }}</strong></td>
+              </tr>
+              <tr>
+                <td>Rendez-vous</td>
+                <td>
+                   <app-checkdate [animal]="animal"></app-checkdate>
+                </td>
+              </tr>
+              <tr>
+                <td>Date de Naissance</td>
+                <td><em>{{ animal.birth | date:"dd/MM/yyyy" }}</em></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- <div class="card-action">
+          <a (click)="goBack()">Retour</a>
+        </div> -->
+      </div>
+    </div>
+    </div>
+    </div>
+    <h4 *ngIf='!animal' class="center">Aucun animal à afficher !</h4>
