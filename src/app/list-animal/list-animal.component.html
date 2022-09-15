@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
       <div *ngFor="let animal of animalList" class="col m4 s6">
-        <div class="card horizontal" animalBorderCard>
+        <div (click)="gotoAnimal(animal)" class="card horizontal" animalBorderCard>
           <div class="card-image">
             <img [src]="animal.picture"/>
           </div>

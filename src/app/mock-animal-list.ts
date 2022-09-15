@@ -55,5 +55,27 @@ export const ANIMALS: Animal[] = [
     lastvisit: new Date("2022-02-02"),
     docnote: "Peut parler notre langue",
     creation: new Date()
+ },
+ {
+    id: 6,
+    picture: "https://cdn.discordapp.com/attachments/616384407057596447/1020017667328983140/118125080_1027789860971436_5688240886405544718_n.jpg",
+    name: "Malia",
+    owner: "Ambrine Malim",
+    email: "ambrerose@live.fr",
+    birth: new Date("2017-02-01"),
+    lastvisit: new Date("2022-05-05"),
+    docnote: "Grand appétit",
+    creation: new Date()
+ },
+ {
+    id: 7,
+    picture: "https://cdn.discordapp.com/attachments/616384407057596447/1020016801863708692/92510111_229285041478656_4829230353217549753_n.jpg",
+    name: "Socrate",
+    owner: "Ambrine Malim",
+    email: "ambrerose@live.fr",
+    birth: new Date("2017-02-01"),
+    lastvisit: new Date("2022-05-05"),
+    docnote: "Très collant",
+    creation: new Date()
  }
 ]

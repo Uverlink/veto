@@ -13,7 +13,7 @@ export class DetailAnimalComponent implements OnInit {
 animalList: Animal[];
 animal: Animal|undefined;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.animalList = ANIMALS;
@@ -23,5 +23,7 @@ animal: Animal|undefined;
       this.animal = this.animalList.find(animal => animal.id == +animalId);
     }
   }
-
+  goToAnimalList() {
+    this.router.navigate(['/animals']);
+  }
 }

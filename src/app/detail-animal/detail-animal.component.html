@@ -31,12 +31,16 @@
                 <td>Date de Naissance</td>
                 <td><em>{{ animal.birth | date:"dd/MM/yyyy" }}</em></td>
               </tr>
+              <tr>
+                <td>Note du Vétérinaire</td>
+                <td><strong>{{ animal.docnote }}</strong></td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <!-- <div class="card-action">
-          <a (click)="goBack()">Retour</a>
-        </div> -->
+        <div class="card-action">
+          <a (click)="goToAnimalList()">Retour</a>
+        </div>
       </div>
     </div>
     </div>
