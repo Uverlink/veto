@@ -5,7 +5,7 @@ import { ListAnimalComponent } from './list-animal/list-animal.component';
 
 const routes: Routes = [
   { path: 'animals', component: ListAnimalComponent},
-  { path: 'animals/:id', component: DetailAnimalComponent},
+  { path: 'animal/:id', component: DetailAnimalComponent},
   { path: '', redirectTo: 'animals', pathMatch: 'full'}
 ];
 

@@ -17,9 +17,10 @@ animal: Animal|undefined;
 
   ngOnInit() {
     this.animalList = ANIMALS;
-    const animalId: string|null = this.route.snapshot.paramMap.get('Id');
+    const animalId: string|null = this.route.snapshot.paramMap.get('id');
     if(animalId) {
-    const animal: Animal|undefined = this.animalList.find(animal => animal.id == +animalId)
+      // const animal: Animal|undefined = this.animalList.find(animal => animal.id == +animalId)
+      this.animal = this.animalList.find(animal => animal.id == +animalId);
     }
   }
 
