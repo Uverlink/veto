@@ -3,14 +3,15 @@
 <div class="container">
   <div class="row">
     <div *ngFor="let animal of animalList" class="col m4 s6">
-      <div class="card horizontal" (click)="selectAnimal(animal)" animalBorderCard>
+      <div class="card horizontal" (click)="selectAnimal(animal.id)" animalBorderCard>
         <div class="card-image">
           <img [src]="animal.picture"/>
         </div>
         <div class="card-stacked">
           <div class="card-content">
             <p> {{animal.name}}</p>
-            <p><small>{{animal.birth}}</small></p>
+            <p><small>{{animal.birth | date:"dd/MM/YY" }}</small></p>
+            <app-checkdate [animal]="animal"></app-checkdate>
           </div>
         </div>
       </div>
@@ -18,11 +19,6 @@
   </div>
 </div>
 
-<input
-  #input
-  (keyup)="selectAnimal(input.value)"
-  type="number"
-/>
 <p *ngIf="animalSelected">
   Vous avez sélectionné: {{ animalSelected?.name }}
 </p>

@@ -16,9 +16,9 @@ export class AppComponent implements OnInit {
     console.table(this.animalList);
   }
 
-  selectAnimal(animalId: string) {// ???????
+  selectAnimal(animalId: number) {
     const id = +animalId
-    const animal: Animal|undefined = this.animalList.find(animal => animal.id == +animalId); // ???????
+    const animal: Animal|undefined = this.animalList.find(animal => animal.id == +animalId);
     if(animal) {
       console.log(`Vous avez sélectionné ${animal.name}`);
       this.animalSelected = animal;
@@ -26,7 +26,6 @@ export class AppComponent implements OnInit {
       console.log("Aucun animal ne correspond à cette recherche.")
       this.animalSelected = animal;
     }
-    // const index: number = +(event.target as HTMLInputElement).value;
     
   }
 }

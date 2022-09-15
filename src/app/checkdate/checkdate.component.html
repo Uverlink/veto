@@ -1,0 +1,5 @@
+ <div [ngSwitch]="state">
+    <div *ngSwitchCase="'short'" class="short">{{diffTime / (1000 * 3600 * 24)}} jours</div>
+    <div *ngSwitchCase="'mid'" class="mid">{{diffTime / (1000 * 3600 * 24)}} jours</div>
+    <div *ngSwitchCase="'late'" class="late">{{diffTime / (1000 * 3600 * 24 * 30)}} mois</div>
+ </div> 

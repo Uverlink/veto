@@ -7,7 +7,7 @@ export const ANIMALS: Animal[] = [
     name: "Garfield",
     owner: "John Arbuckle",
     email: "john@lasagne.com",
-    birth: new Date(),
+    birth: new Date("2016-01-16"),
     lastvisit: new Date(),
     docnote: "Problème au coeur",
     creation: new Date()
@@ -18,8 +18,8 @@ export const ANIMALS: Animal[] = [
     name: "Bobert",
     owner: "Bob Foldrot",
     email: "bobob@gmaiL.com",
-    birth: new Date(),
-    lastvisit: new Date(),
+    birth: new Date("2011-04-17"),
+    lastvisit: new Date("2022-08-17"),
     docnote: "Rien d'anormal",
     creation: new Date()
  },
@@ -29,7 +29,7 @@ export const ANIMALS: Animal[] = [
     name: "Jack",
     owner: "Emett Algear",
     email: "string",
-    birth: new Date(),
+    birth: new Date("2012-11-12"),
     lastvisit: new Date(),
     docnote: "A une patte bionique",
     creation: new Date()
@@ -40,7 +40,7 @@ export const ANIMALS: Animal[] = [
     name: "Foufou",
     owner: "Gal Ross",
     email: "gal.ross@pro.com",
-    birth: new Date(),
+    birth: new Date("2004-08-23"),
     lastvisit: new Date(),
     docnote: "Manque des dents",
     creation: new Date()
@@ -51,7 +51,7 @@ export const ANIMALS: Animal[] = [
     name: "Dyogènes",
     owner: "Arina Kazir",
     email: "arinak@hotmail.fr",
-    birth: new Date(),
+    birth: new Date("2022-02-01"),
     lastvisit: new Date(),
     docnote: "Peut parler notre langue",
     creation: new Date()
