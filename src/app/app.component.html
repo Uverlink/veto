@@ -1,14 +1,34 @@
-<h1>Liste d'Animaux</h1>
+<h1 class="center">Liste d'Animaux</h1>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let animal of animalList" class="col m4 s6">
+      <div class="card horizontal">
+        <div class="card-image">
+          <img [src]="animal.picture"/>
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p> {{animal.name}}</p>
+            <p><small>{{animal.birth}}</small></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <input
   #input
-  (keyup.enter)="selectAnimal(input.value)"
+  (keyup)="selectAnimal(input.value)"
   type="number"
 />
-<p>Vous avez sélectionné: {{ animalSelected?.name }}</p>
+<p *ngIf="animalSelected">
+  Vous avez sélectionné: {{ animalSelected?.name }}
+</p>
+<p *ngIf="!animalSelected">
+  Tapez l'id valide d'un animal dans la barre de recherche.
+</p>
 
-<p>{{animalList[0].name}}</p>
-<p>{{animalList[1].name}}</p>
-<p>{{animalList[2].name}}</p>
-<p>{{animalList[3].name}}</p>
-<p>{{animalList[4].name}}</p>
 <router-outlet></router-outlet>

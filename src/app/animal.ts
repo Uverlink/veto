@@ -1,5 +1,6 @@
 export class Animal {
     id: number;
+    picture: string;
     name: string;
     owner: string;
     email: string;
