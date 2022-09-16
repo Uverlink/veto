@@ -7,6 +7,7 @@ import { BorderCardDirective } from './border-card.directive';
 import { CheckdateComponent } from './checkdate/checkdate.component';
 import { ListAnimalComponent } from './list-animal/list-animal.component';
 import { DetailAnimalComponent } from './detail-animal/detail-animal.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DetailAnimalComponent } from './detail-animal/detail-animal.component';
     BorderCardDirective,
     CheckdateComponent,
     ListAnimalComponent,
-    DetailAnimalComponent
+    DetailAnimalComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
